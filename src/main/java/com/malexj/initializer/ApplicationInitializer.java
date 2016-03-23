@@ -4,6 +4,7 @@ import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
+import org.springframework.web.filter.DelegatingFilterProxy;
 import org.springframework.web.servlet.DispatcherServlet;
 
 import javax.servlet.ServletContext;
@@ -27,6 +28,11 @@ public class ApplicationInitializer implements WebApplicationInitializer {
 
         WebApplicationContext context = getContext();
         servletContext.addListener(new ContextLoaderListener(context));
+
+        // фильтр, который будет определять наши реквесты и проверять валидность сессии
+        servletContext.addFilter("springSecurityFilterChain",
+                new DelegatingFilterProxy("springSecurityFilterChain"))
+                .addMappingForUrlPatterns(null, false, "/*");
 
         ServletRegistration.Dynamic servletRegistration = servletContext.addServlet(DISPATCHER, new DispatcherServlet(context));
         servletRegistration.addMapping(MAPPING_URL);
