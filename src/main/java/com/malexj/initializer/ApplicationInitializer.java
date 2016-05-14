@@ -14,7 +14,7 @@ import javax.servlet.ServletRegistration;
 public class ApplicationInitializer implements WebApplicationInitializer {
 
     private final String DISPATCHER = "dispatcher";
-    private final String MAPPING_URL = "/*";
+    private final String MAPPING_URL = "/";
     private final String CONFIG_LOCATION = "com.malexj.config";
 
     private AnnotationConfigWebApplicationContext getContext() {
