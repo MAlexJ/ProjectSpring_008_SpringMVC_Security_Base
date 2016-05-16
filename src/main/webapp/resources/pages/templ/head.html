@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Example app</title>
+    <base href="/"/>
+
+    <!-- AngularJS: lib -->
+    <script type="text/javascript" th:src="@{/resources/js/lib/angular.min.js}" src="../js/lib/angular.min.js"></script>
+    <script type="text/javascript" th:src="@{/resources/js/lib/angular-route.min.js}"
+            src="../js/lib/angular-route.min.js"></script>
+    <script type="text/javascript" th:src="@{/resources/js/lib/angular-cookies.js}"
+            src="../js/lib/angular-cookies.js"></script>
+    <!-- AngularJS: Module -->
+    <script type="text/javascript" th:src="@{/resources/js/module/module.js}" src="../js/module/module.js"></script>
+    <!-- AngularJS: Controller -->
+    <script type="text/javascript" th:src="@{/resources/js/controller/controller.js}"
+            src="../js/controller/controller.js"></script>
+
+    <!-- JS: modernizr -->
+    <script type="text/javascript" th:src="@{/resources/js/lib/modernizr.js}"
+            src="../js/lib/modernizr.js"></script>
+
+    <!-- JS: jquery -->
+    <script type="text/javascript" th:src="@{/resources/js/lib/jquery-2.1.1.js}"
+            src="../js/lib/jquery-2.1.1.js"></script>
+
+    <!-- JS: MyScript -->
+    <script type="text/javascript" th:src="@{/resources/js/js/main.js}"
+            src="../js/js/main.js"></script>
+
+    <!-- Style: CSS -->
+    <link rel="stylesheet" th:href="@{/resources/css/style.css}" href="../css/style.css"/>
+    <link rel="stylesheet" th:href="@{/resources/css/reset.css}" href="../css/reset.css"/>
+
+    <!-- Style: fonts -->
+    <link th:href="@{/resources/fonts/font.woff}"
+          href="../fonts/font.woff" rel='stylesheet' type='text/css'/>
+
+</head>
+</html>

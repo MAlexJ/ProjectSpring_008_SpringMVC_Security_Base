@@ -28,6 +28,23 @@ myApp.controller('loginController', function ($scope, $http, $cookieStore) {
     // is login
     $scope.isLogin = function () {
         return $cookieStore.get('session') == null;
-    }
+    };
+
+    // Logout -> SpringSecurity
+    $scope.regClick = function (regForm, reg) {
+        if (regForm.$valid) {
+            var account = {
+                name: reg.name,
+                password: reg.password,
+                email: reg.email
+            };            
+            $http.post('/register', account).success(function (status) {
+                console.log("success код ответа: " + status);
+            }).error(function (status) {
+                console.log("error код ответа: " + status);
+            });
+        }
+    };
+
 
 });

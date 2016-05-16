@@ -1,235 +1,160 @@
 <!DOCTYPE html>
 <html class="uk-notouch" xmlns:th="http://www.thymeleaf.org" lang="en-ru" ng-app="myApp">
-<head>
 
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Example app</title>
-    <base href="/" />
-
-    <!-- AngularJS: lib -->
-    <script type="text/javascript" th:src="@{/resources/js/lib/angular.min.js}" src="../js/lib/angular.min.js"></script>
-    <script type="text/javascript" th:src="@{/resources/js/lib/angular-route.min.js}"
-            src="../js/lib/angular-route.min.js"></script>
-    <script type="text/javascript" th:src="@{/resources/js/lib/angular-cookies.js}"
-            src="../js/lib/angular-cookies.js"></script>
-    <!-- AngularJS: Module -->
-    <script type="text/javascript" th:src="@{/resources/js/module/module.js}" src="../js/module/module.js"></script>
-    <!-- AngularJS: Controller -->
-    <script type="text/javascript" th:src="@{/resources/js/controller/controller.js}"
-            src="../js/controller/controller.js"></script>
-
-    <!-- JS: modernizr -->
-    <script type="text/javascript" th:src="@{/resources/js/lib/modernizr.js}"
-            src="../js/lib/modernizr.js"></script>
-
-    <!-- JS: jquery -->
-    <script type="text/javascript" th:src="@{/resources/js/lib/jquery-2.1.1.js}"
-            src="../js/lib/jquery-2.1.1.js"></script>
-
-    <!-- JS: MyScript -->
-    <script type="text/javascript" th:src="@{/resources/js/js/main.js}"
-            src="../js/js/main.js"></script>
-
-    <!-- Style: CSS -->
-    <link rel="stylesheet" th:href="@{/resources/css/style.css}" href="../css/style.css"/>
-    <link rel="stylesheet" th:href="@{/resources/css/reset.css}" href="../css/reset.css"/>
-
-    <!-- Style: fonts -->
-    <link th:href="@{/resources/fonts/font.woff}"
-          href="../fonts/font.woff" rel='stylesheet' type='text/css'/>
-
-</head>
+<head th:replace="templ/head :: head"></head>
 
 <body>
 
 <header class="cd-header">
     <div id="cd-logo">
-        <a href="#0"><img th:src="@{/resources/img/cd-logo.svg}" src="../img/cd-logo.svg" alt="Logo"/></a>
+        <a href="#"><img th:src="@{/resources/img/cd-logo.svg}" src="../img/cd-logo.svg" alt="Logo"/></a>
     </div>
 </header>
 
 <section id="cd-intro" ng-controller="loginController">
     <div id="cd-intro-tagline">
-        <h1>Secondary Fixed Navigation</h1>
-        <a ng-show="isLogin()" href="" class="cd-btn cd-login">Login</a>
-        <a ng-hide="isLogin()" ng-click="logoutClick()" href="" class="cd-btn">Logout</a>
+        <h1 class="design"><b>Design Patterns</b></h1>
+        <div class="main-nav">
+            <ul>
+                <li><a ng-show="isLogin()" href="" class="cd-signin cd-btn cd-login">Login</a></li>
+                <li><a ng-hide="isLogin()" href="" ng-click="logoutClick()" class="cd-btn">Logout</a></li>
+            </ul>
+        </div>
+        <!--<a ng-show="isLogin()" href="" class="cd-btn cd-login">Login</a>-->
+        <!--<a ng-hide="isLogin()" ng-click="logoutClick()" href="" class="cd-btn">Logout</a>-->
     </div>
 
     <!-- Login form -->
-    <div class="cd-popup" role="alert">
-        <form name="loginForm">
-            <div class="cd-popup-container">
-                <br/>
-                <br/>
-                <h2><b>Login</b></h2>
-                <br/>
+    <div th:replace="templ/login_form :: login_form"></div>
 
-                <input type="text" ng-model="login.name" placeholder="Login" required=""/>
-                <br/>
-                <br/>
-
-                <input type="password" ng-model="login.password" placeholder="Password" required=""/>
-                <br/>
-                <br/>
-
-                <ul class="cd-buttons cd-close">
-                    <li><a ng-click="loginClick(loginForm, login)" href="" class="cd-close">Login</a></li>
-                    <li><a href="">Register</a></li>
-                </ul>
-                <a href="" class="cd-popup-close img-replace">Close</a>
-            </div>
-        </form>
-    </div>
 </section>
 
-<div class="cd-secondary-nav">
-    <a href="#0" class="cd-secondary-nav-trigger">Menu<span></span></a>
-    <nav>
-        <ul>
-            <li>
-                <a href="#cd-placeholder-1">
-                    <b>Intro</b>
-                    <span></span><!-- icon -->
-                </a>
-            </li>
-            <li>
-                <a href="#cd-placeholder-2">
-                    <b>Location</b>
-                    <span></span><!-- icon -->
-                </a>
-            </li>
-            <li>
-                <a href="#cd-placeholder-3">
-                    <b>Chat</b>
-                    <span></span><!-- icon -->
-                </a>
-            </li>
-            <li>
-                <a href="#cd-placeholder-4">
-                    <b>Calendar</b>
-                    <span></span><!-- icon -->
-                </a>
-            </li>
-            <li>
-                <a href="#cd-placeholder-5">
-                    <b>Stats</b>
-                    <span></span><!-- icon -->
-                </a>
-            </li>
-        </ul>
-    </nav>
-</div> <!-- .cd-secondary-nav -->
+<div th:replace="templ/header_nav :: header_nav"></div>
+
 <main class="cd-main-content">
-
+    <br/>
     <section id="cd-placeholder-1" class="cd-section cd-container">
-
-
-        <h2>Intro</h2>
+        <h2>Design Patterns</h2>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ab consequatur fugiat delectus sint in
-            velit quo possimus, ullam aspernatur ipsa natus tenetur nulla distinctio doloremque totam. Earum enim sed
-            dolorum, exercitationem temporibus quaerat eos, accusantium amet facilis facere eaque commodi optio quidem
-            rem minima nisi laborum quae animi nostrum aut voluptates veniam. Cum neque quam fuga sapiente quidem eum
-            necessitatibus nulla, cupiditate a, repudiandae iusto in dolor eaque commodi nostrum consequuntur dolores
-            velit eligendi dolorem quae. Distinctio quae, cumque aliquid quos consequuntur perspiciatis voluptates,
-            laboriosam velit qui et aut sint esse nemo voluptatibus, dolore veritatis natus facilis commodi sed. Lorem
-            ipsum dolor sit amet, consectetur adipisicing elit. Corporis tempore, harum consequatur optio laboriosam
-            nihil sint voluptatem ducimus porro quae expedita alias consectetur explicabo cumque maxime facere
-            praesentium! Ad illo quibusdam omnis suscipit qui eos autem est laborum ducimus! Tenetur?
+            In software engineering, a design pattern is a general repeatable solution to a commonly occurring problem
+            in software design. A design pattern isn't a finished design that can be transformed directly into code. It
+            is a description or template for how to solve a problem that can be used in many different situations.
         </p>
-    </section> <!-- #cd-placeholder-1 -->
+        <br/>
+        <br/>
+        <h2>Uses of Design Patterns</h2>
+        <p>Design patterns can speed up the development process by providing tested, proven development paradigms.
+            Effective software design requires considering issues that may not become visible until later in the
+            implementation. Reusing design patterns helps to prevent subtle issues that can cause major problems and
+            improves code readability for coders and architects familiar with the patterns.</p>
 
-    <section id="cd-placeholder-2" class="cd-section cd-container">
-        <h2>Location</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ab consequatur fugiat delectus sint in
-            velit quo possimus, ullam aspernatur ipsa natus tenetur nulla distinctio doloremque totam. Earum enim sed
-            dolorum, exercitationem temporibus quaerat eos, accusantium amet facilis facere eaque commodi optio quidem
-            rem minima nisi laborum quae animi nostrum aut voluptates veniam. Cum neque quam fuga sapiente quidem eum
-            necessitatibus nulla, cupiditate a, repudiandae iusto in dolor eaque commodi nostrum consequuntur dolores
-            velit eligendi dolorem quae. Distinctio quae, cumque aliquid quos consequuntur perspiciatis voluptates,
-            laboriosam velit qui et aut sint esse nemo voluptatibus, dolore veritatis natus facilis commodi sed. Lorem
-            ipsum dolor sit amet, consectetur adipisicing elit. Fugiat omnis quia maiores, et. Aut facilis ducimus,
-            labore culpa, nemo eum qui quae, rem libero aspernatur, inventore quos modi a ex sit. Nulla iure odio at quo
-            corporis assumenda ea fugiat adipisci aspernatur incidunt sapiente consequatur, ullam cumque dolorem facilis
-            laboriosam a dolore similique velit esse. Eveniet omnis voluptas, nobis dicta cupiditate odit, similique
-            mollitia eos dignissimos provident voluptatem adipisci ullam facilis alias! Reprehenderit voluptatem
-            provident ut veniam aliquid, labore culpa.
-        </p>
-    </section> <!-- #cd-placeholder-2 -->
-
-    <section id="cd-placeholder-3" class="cd-section cd-container">
-        <h2>Chat</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ab consequatur fugiat delectus sint in
-            velit quo possimus, ullam aspernatur ipsa natus tenetur nulla distinctio doloremque totam. Earum enim sed
-            dolorum, exercitationem temporibus quaerat eos, accusantium amet facilis facere eaque commodi optio quidem
-            rem minima nisi laborum quae animi nostrum aut voluptates veniam. Cum neque quam fuga sapiente quidem eum
-            necessitatibus nulla, cupiditate a, repudiandae iusto in dolor eaque commodi nostrum consequuntur dolores
-            velit eligendi dolorem quae. Distinctio quae, cumque aliquid quos consequuntur perspiciatis voluptates,
-            laboriosam velit qui et aut sint esse nemo voluptatibus, dolore veritatis natus facilis commodi sed. Lorem
-            ipsum dolor sit amet, consectetur adipisicing elit. Alias sunt mollitia atque tempore ea cum exercitationem,
-            quisquam est consectetur tempora ipsam, obcaecati voluptate a. Autem minus cumque voluptatem eaque fugit
-            nostrum reprehenderit incidunt officia. Nesciunt reiciendis delectus officiis fugit sint at totam nisi
-            commodi repellendus iusto dolorum molestias dignissimos natus, impedit quam atque ex voluptas ut facere
-            assumenda iure incidunt rerum vitae accusamus? Et voluptatibus unde, fugiat tenetur sed dolore, praesentium
-            magni illo nobis incidunt, possimus doloremque dolorem sunt. Aliquid ducimus delectus esse voluptatem
-            officia perferendis, a voluptate omnis adipisci expedita distinctio praesentium natus veniam accusamus iure,
-            quasi, inventore reiciendis.
-        </p>
-    </section> <!-- #cd-placeholder-3 -->
-
-    <section id="cd-placeholder-4" class="cd-section cd-container">
-        <h2>Calendar</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ab consequatur fugiat delectus sint in
-            velit quo possimus, ullam aspernatur ipsa natus tenetur nulla distinctio doloremque totam. Earum enim sed
-            dolorum, exercitationem temporibus quaerat eos, accusantium amet facilis facere eaque commodi optio quidem
-            rem minima nisi laborum quae animi nostrum aut voluptates veniam. Cum neque quam fuga sapiente quidem eum
-            necessitatibus nulla, cupiditate a, repudiandae iusto in dolor eaque commodi nostrum consequuntur dolores
-            velit eligendi dolorem quae. Distinctio quae, cumque aliquid quos consequuntur perspiciatis voluptates,
-            laboriosam velit qui et aut sint esse nemo voluptatibus, dolore veritatis natus facilis commodi sed. Lorem
-            ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, minus nisi ipsam quasi. Reprehenderit quo
-            dolorem ratione in, porro placeat nihil asperiores, ab earum excepturi sint non. Error officiis, sint
-            expedita dolore fuga voluptates ipsam temporibus vero suscipit porro asperiores deserunt sapiente optio.
-            Quas vero nam nihil, id suscipit, similique facere dicta velit, quis, commodi perspiciatis. Perferendis
-            necessitatibus, in, sequi ipsum eum voluptates quisquam voluptatem, rerum fugiat deleniti voluptatum eius
-            odio, expedita enim libero quaerat! Veniam eos, maiores nostrum mollitia reprehenderit, obcaecati
-            repudiandae eius perspiciatis? Quo voluptatum ipsa voluptatem sequi esse eius consectetur, quae ea accusamus
-            porro autem ipsum, quam dignissimos, nesciunt consequuntur quaerat. Numquam iure velit veniam saepe sunt
-            enim asperiores hic nam aperiam illo officia molestias quis dicta autem incidunt consequatur dolor,
-            explicabo corrupti nostrum odio ea laudantium magni, nulla. Eaque officiis, distinctio, dolores eligendi
-            facilis tempore reiciendis illum iste sed temporibus rerum aliquid culpa dolor, et voluptatibus!
-        </p>
-    </section> <!-- #cd-placeholder-4 -->
-
-    <section id="cd-placeholder-5" class="cd-section cd-container">
-        <h2>Stats</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem ab consequatur fugiat delectus sint in
-            velit quo possimus, ullam aspernatur ipsa natus tenetur nulla distinctio doloremque totam. Earum enim sed
-            dolorum, exercitationem temporibus quaerat eos, accusantium amet facilis facere eaque commodi optio quidem
-            rem minima nisi laborum quae animi nostrum aut voluptates veniam. Cum neque quam fuga sapiente quidem eum
-            necessitatibus nulla, cupiditate a, repudiandae iusto in dolor eaque commodi nostrum consequuntur dolores
-            velit eligendi dolorem quae. Distinctio quae, cumque aliquid quos consequuntur perspiciatis voluptates,
-            laboriosam velit qui et aut sint esse nemo voluptatibus, dolore veritatis natus facilis commodi sed. Lorem
-            ipsum dolor sit amet, consectetur adipisicing elit. Harum, neque, tempora. Accusamus similique labore harum
-            in ut repellat. Earum iusto non ex perspiciatis sequi a, provident nam optio, vitae ea vel illum excepturi
-            aut fugiat quos. Fugit facere a, quidem quia perferendis ipsum impedit eaque repellendus esse, tenetur
-            repellat natus voluptatem ab possimus laborum tempora qui nam vero et omnis. Sed ipsum possimus in,
-            dignissimos optio itaque quis, reprehenderit vero vel tempora, maiores odit totam. Doloribus voluptatem
-            similique possimus corporis pariatur labore, nulla, minima magnam, officia rerum vel alias, molestiae soluta
-            quisquam ea. Necessitatibus hic vitae nisi ipsum cum a voluptatibus commodi eius ad minus animi cumque nulla
-            suscipit itaque, reiciendis placeat modi sequi eligendi voluptatum. Quasi veritatis autem omnis, voluptatum
-            hic eos dicta, repudiandae iusto rem error facere pariatur commodi impedit reprehenderit temporibus facilis
-            magnam asperiores. Ipsam, illum commodi laboriosam neque eligendi eaque quisquam quidem illo sint eos. Esse
-            velit provident, veritatis dolor facilis dignissimos commodi molestias saepe impedit excepturi qui odit
-            repudiandae cumque? Sunt omnis voluptatum, eaque repellat, pariatur iure nobis cum eos repellendus voluptate
-            culpa totam alias autem ea earum animi optio laudantium neque nisi suscipit in adipisci enim quisquam
-            laboriosam! Cumque, fugit saepe alias mollitia dignissimos.
-        </p>
+        <p> Often, people only understand how to apply certain software design techniques to certain problems. These
+            techniques are difficult to apply to a broader range of problems. Design patterns provide general solutions,
+            documented in a format that doesn't require specifics tied to a particular problem. </p>
+        <p> In addition, patterns allow developers to communicate using well-known, well understood names for software
+            interactions. Common design patterns can be improved over time, making them more robust than ad-hoc
+            designs.</p>
     </section>
+    <br/>
+    <section id="cd-placeholder-2" class="cd-section cd-container">
+        <h2>Creational design patterns</h2>
+        <p>These design patterns are all about class instantiation. This pattern can be further divided into
+            class-creation patterns and object-creational patterns. While class-creation patterns use inheritance
+            effectively in the instantiation process, object-creation patterns use delegation effectively to get the job
+            done. </p>
+
+        <ul>
+            <li class="brown-text"><b>Abstract Factory</b></li>
+            Creates an instance of several families of classes<br/><br/>
+            <li class="brown-text"><b>Builder</b></li>
+            Separates object construction from its representation<br/><br/>
+            <li class="brown-text"><b>Factory Method</b></li>
+            Creates an instance of several derived classes<br/><br/>
+            <li class="brown-text"><b>Object Pool</b></li>
+            Avoid expensive acquisition and release of resources by recycling objects that are no longer in
+            use<br/><br/>
+            <li class="brown-text"><b>Prototype</b></li>
+            A fully initialized instance to be copied or cloned<br/><br/>
+            <li class="brown-text"><b>Singleton</b></li>
+            A class of which only a single instance can exist<br/><br/>
+        </ul>
+    </section> <!-- #cd-placeholder-2 -->
+    <br/>
+    <section id="cd-placeholder-3" class="cd-section cd-container">
+        <h2>Structural design patterns</h2>
+        <p>These design patterns are all about Class and Object composition. Structural class-creation patterns use
+            inheritance to compose interfaces. Structural object-patterns define ways to compose objects to obtain new
+            functionality.</p>
+        <ul>
+            <li><b>Adapter</b></li>
+            Match interfaces of different classes<br/><br/>
+            <li><h5>Bridge</h5></li>
+            Separates an object’s interface from its implementation<br/><br/>
+            <li><b>Composite</b></li>
+            A tree structure of simple and composite objects<br/><br/>
+            <li><b>Decorator</b></li>
+            Add responsibilities to objects dynamically<br/><br/>
+            <li><b>Facade</b></li>
+            A single class that represents an entire subsystem<br/><br/>
+            <li><b>Flyweight</b></li>
+            A fine-grained instance used for efficient sharing<br/><br/>
+            <li><b>Private Class Data</b></li>
+            Restricts accessor/mutator access<br/><br/>
+            <li><b>Proxy</b></li>
+            An object representing another object<br/><br/>
+        </ul>
+    </section> <!-- #cd-placeholder-3 -->
+    <br/>
+    <section id="cd-placeholder-4" class="cd-section cd-container">
+        <h2>Behavioral design patterns</h2>
+        <p>These design patterns are all about Class's objects communication. Behavioral patterns are those patterns
+            that are most specifically concerned with communication between objects.</p>
+        <ul>
+            <li class="brown-text"><b>Chain of responsibility</b></li>
+            A way of passing a request between a chain of objects <br/><br/>
+
+            <li class="brown-text"><b>Command</b></li>
+            Encapsulate a command request as an object<br/><br/>
+
+            <li class="brown-text"><b>Interpreter</b></li>
+            <br/> A way to include language elements in a program<br/>
+
+            <li class="brown-text"><b>Iterator</b></li>
+            <br/>Sequentially access the elements of a collection<br/>
+
+            <li class="brown-text"><b>Mediator</b></li>
+            Defines simplified communication between classes<br/><br/>
+
+            <li class="brown-text"><b>Memento</b></li>
+            Capture and restore an object's internal state<br/><br/>
+
+            <li class="brown-text"><b>Null Object</b></li>
+            Designed to act as a default value of an object<br/><br/>
+
+            <li class="brown-text"><b>Observer</b></li>
+            A way of notifying change to a number of classes<br/><br/>
+
+            <li class="brown-text"><b>State</b></li>
+            Alter an object's behavior when its state changes<br/><br/>
+
+            <li class="brown-text"><b>Strategy</b></li>
+            Encapsulates an algorithm inside a class<br/><br/>
+
+            <li class="brown-text">Template method<b></b></li>
+            Defer the exact steps of an algorithm to a subclass<br/><br/>
+
+            <li class="brown-text"><b>Visitor</b></li>
+            Defines a new operation to a class without change<br/><br/>
+
+        </ul>
+    </section> <!-- #cd-placeholder-4 -->
+    <br/>
+
 </main>
+
+<footer>
+    Malexj
+</footer>
+
 </body>
 </html>
