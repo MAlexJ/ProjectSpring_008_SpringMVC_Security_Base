@@ -17,7 +17,7 @@ body {
 }
 
 a {
-    color: #f5484a;
+    color: #092645;
     text-decoration: none;
 }
 
@@ -117,6 +117,7 @@ Navigation
 
 #cd-logo img {
     display: block;
+    height: 32px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -248,10 +249,26 @@ Intro
     /*z-index: 2;*/
 }
 
-.cd-backggg {
+.cd-back-ground-1 {
     position: relative;
 
-    background: rgb(255, 243, 252);
+    background: rgb(255, 255, 255);
+    background-size: cover;
+    /*z-index: 2;*/
+}
+
+.cd-back-ground-2 {
+    position: relative;
+
+    background: rgba(0, 167, 160, 0.08);
+    background-size: cover;
+    /*z-index: 2;*/
+}
+
+.cd-back-ground-3 {
+    position: relative;
+
+    background: rgba(222, 189, 48, 0.08);
     background-size: cover;
     /*z-index: 2;*/
 }
@@ -1312,7 +1329,7 @@ xsigin/signup popup
     height: 40px;
     right: 0;
     top: -40px;
-    background: url("../img/cd-icon-close.svg") no-repeat center center;
+    background: url(/resources/img/cd-logo1.svg) no-repeat center center;
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
@@ -1567,7 +1584,7 @@ xsigin/signup popup
     }
     .cd-tabs-content li p {
         font-size: 16px;
-        font-size: 1rem;
+        font-size: 0.875rem;
     }
 }
 
@@ -1721,13 +1738,13 @@ xsigin/signup popup
     position: fixed;
     height: 100%;
     width: 90%;
-    top: 80px;
+    top: 0;
     right: 0;
     background: #ffffff;
     padding: 0 5% 1em;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
-    /*z-index: 1;*/
+    z-index: 1;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     -webkit-transform: translateZ(0) translateX(100%);
@@ -1785,13 +1802,13 @@ xsigin/signup popup
 
 .cd-close-panel {
     position: fixed;
-    top: 5px;
+    top: 10px;
     right: -100%;
     display: block;
     height: 40px;
     width: 40px;
-    overflow: hidden;
-    text-indent: 100%;
+    /*overflow: hidden;*/
+    /*text-indent: 100%;*/
     white-space: nowrap;
     z-index: 4;
     /* Force Hardware Acceleration in WebKit */
@@ -1814,7 +1831,7 @@ xsigin/signup popup
     display: inline-block;
     height: 3px;
     width: 18px;
-    background: #6c7d8e;
+   background: #000000;
 }
 .cd-close-panel::before {
     -webkit-transform: rotate(45deg);
@@ -1896,9 +1913,9 @@ xsigin/signup popup
 }
 @media only screen and (min-width: 768px) {
     .cd-faq-trigger {
-        font-size: 24px;
-        font-size: 1.5rem;
-        font-weight: 300;
+        font-size: 16px;
+        /*font-size: 1.5rem;*/
+        /*font-weight: 300;*/
         margin: 0;
         padding: 24px 72px 24px 24px;
     }

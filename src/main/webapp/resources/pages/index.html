@@ -7,7 +7,7 @@
 
 <header class="cd-header">
     <div id="cd-logo">
-        <a href="#"><img th:src="@{/resources/img/cd-logo.svg}" src="../img/cd-logo.svg" alt="Logo"/></a>
+        <a href="#"><img th:src="@{/resources/img/logo.png}" src="../img/logo.png" alt="Logo"/></a>
     </div>
 </header>
 
@@ -31,6 +31,7 @@
     <br/>
     <section id="cd-placeholder-1" class="cd-section cd-container">
         <h2>Design Patterns</h2>
+        <br/>
         <p>
             In software engineering, a design pattern is a general repeatable solution to a commonly occurring problem
             in software design. A design pattern isn't a finished design that can be transformed directly into code. It
@@ -39,6 +40,7 @@
         <br/>
         <br/>
         <h2>Uses of Design Patterns</h2>
+        <br/>
         <p>Design patterns can speed up the development process by providing tested, proven development paradigms.
             Effective software design requires considering issues that may not become visible until later in the
             implementation. Reusing design patterns helps to prevent subtle issues that can cause major problems and
@@ -52,59 +54,73 @@
             designs.</p>
     </section>
     <br/>
-    <section id="cd-placeholder-2" class="cd-section cd-container">
-        <h2>Creational design patterns</h2>
-        <p>These design patterns are all about class instantiation. This pattern can be further divided into
-            class-creation patterns and object-creational patterns. While class-creation patterns use inheritance
-            effectively in the instantiation process, object-creation patterns use delegation effectively to get the job
-            done. </p>
-
-        <ul>
-            <li class="brown-text"><b>Abstract Factory</b></li>
-            Creates an instance of several families of classes<br/><br/>
-            <li class="brown-text"><b>Builder</b></li>
-            Separates object construction from its representation<br/><br/>
-            <li class="brown-text"><b>Factory Method</b></li>
-            Creates an instance of several derived classes<br/><br/>
-            <li class="brown-text"><b>Object Pool</b></li>
-            Avoid expensive acquisition and release of resources by recycling objects that are no longer in
-            use<br/><br/>
-            <li class="brown-text"><b>Prototype</b></li>
-            A fully initialized instance to be copied or cloned<br/><br/>
-            <li class="brown-text"><b>Singleton</b></li>
-            A class of which only a single instance can exist<br/><br/>
-        </ul>
-    </section> <!-- #cd-placeholder-2 -->
-    <br/>
-    <section id="cd-placeholder-3" class="cd-section cd-container">
-        <h2>Structural design patterns</h2>
-        <p>These design patterns are all about Class and Object composition. Structural class-creation patterns use
-            inheritance to compose interfaces. Structural object-patterns define ways to compose objects to obtain new
-            functionality.</p>
-        <ul>
-            <li><b>Adapter</b></li>
-            Match interfaces of different classes<br/><br/>
-            <li><h5>Bridge</h5></li>
-            Separates an object’s interface from its implementation<br/><br/>
-            <li><b>Composite</b></li>
-            A tree structure of simple and composite objects<br/><br/>
-            <li><b>Decorator</b></li>
-            Add responsibilities to objects dynamically<br/><br/>
-            <li><b>Facade</b></li>
-            A single class that represents an entire subsystem<br/><br/>
-            <li><b>Flyweight</b></li>
-            A fine-grained instance used for efficient sharing<br/><br/>
-            <li><b>Private Class Data</b></li>
-            Restricts accessor/mutator access<br/><br/>
-            <li><b>Proxy</b></li>
-            An object representing another object<br/><br/>
-        </ul>
+    <section class="cd-back-ground-2">
+        <section id="cd-placeholder-2" class="cd-section cd-container">
+            <br/>
+            <h2>Creational design patterns</h2>
+            <br/>
+            <p>These design patterns are all about class instantiation. This pattern can be further divided into
+                class-creation patterns and object-creational patterns. While class-creation patterns use inheritance
+                effectively in the instantiation process, object-creation patterns use delegation effectively to get the
+                job
+                done. </p>
+            <br/>
+            <ul>
+                <li class="brown-text"><b>Abstract Factory</b></li>
+                Creates an instance of several families of classes<br/><br/>
+                <li class="brown-text"><b>Builder</b></li>
+                Separates object construction from its representation<br/><br/>
+                <li class="brown-text"><b>Factory Method</b></li>
+                Creates an instance of several derived classes<br/><br/>
+                <li class="brown-text"><b>Object Pool</b></li>
+                Avoid expensive acquisition and release of resources by recycling objects that are no longer in
+                use<br/><br/>
+                <li class="brown-text"><b>Prototype</b></li>
+                A fully initialized instance to be copied or cloned<br/><br/>
+                <li class="brown-text"><b>Singleton</b></li>
+                A class of which only a single instance can exist<br/><br/>
+            </ul>
+        </section> <!-- #cd-placeholder-2 -->
+        <br/>
+    </section>
+    <section class="cd-back-ground-3">
+        <section id="cd-placeholder-3" class="cd-section cd-container">
+            <br/>
+            <h2>Structural design patterns</h2>
+            <br/>
+            <p>These design patterns are all about Class and Object composition. Structural class-creation patterns use
+                inheritance to compose interfaces. Structural object-patterns define ways to compose objects to obtain
+                new
+                functionality.</p>
+            <br/>
+            <ul>
+                <li><b>Adapter</b></li>
+                Match interfaces of different classes<br/><br/>
+                <li><h5>Bridge</h5></li>
+                Separates an object’s interface from its implementation<br/><br/>
+                <li><b>Composite</b></li>
+                A tree structure of simple and composite objects<br/><br/>
+                <li><b>Decorator</b></li>
+                Add responsibilities to objects dynamically<br/><br/>
+                <li><b>Facade</b></li>
+                A single class that represents an entire subsystem<br/><br/>
+                <li><b>Flyweight</b></li>
+                A fine-grained instance used for efficient sharing<br/><br/>
+                <li><b>Private Class Data</b></li>
+                Restricts accessor/mutator access<br/><br/>
+                <li><b>Proxy</b></li>
+                An object representing another object<br/><br/>
+            </ul>
+        </section> <!-- #cd-placeholder-3 -->
     </section> <!-- #cd-placeholder-3 -->
     <br/>
     <section id="cd-placeholder-4" class="cd-section cd-container">
+        <br/>
         <h2>Behavioral design patterns</h2>
+        <br/>
         <p>These design patterns are all about Class's objects communication. Behavioral patterns are those patterns
             that are most specifically concerned with communication between objects.</p>
+        <br/>
         <ul>
             <li class="brown-text"><b>Chain of responsibility</b></li>
             A way of passing a request between a chain of objects <br/><br/>
@@ -144,9 +160,10 @@
 
         </ul>
     </section> <!-- #cd-placeholder-4 -->
+
     <br/>
 
-    <section class="cd-backggg">
+    <section class="cd-back-ground-1">
         <section id="cd-placeholder-5" class="cd-section cd-container" style="max-width:100%">
             <div th:replace="templ/patterns :: patterns"></div>
         </section>
