@@ -5,8 +5,8 @@ public class Account {
     private Long id;
     private String name;
     private String password;
-
     private String email;
+    private Roles role;
 
     public Account() {
     }
@@ -43,6 +43,14 @@ public class Account {
         this.email = email;
     }
 
+    public Roles getRole() {
+        return role;
+    }
+
+    public void setRole(Roles role) {
+        this.role = role;
+    }
+
     @Override
     public String toString() {
         return "Account{" +
@@ -50,6 +58,7 @@ public class Account {
                 ", name='" + name + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
+                ", role=" + role +
                 '}';
     }
 }

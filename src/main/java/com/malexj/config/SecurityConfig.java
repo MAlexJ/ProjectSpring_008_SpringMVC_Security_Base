@@ -33,11 +33,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public void configureAuthBuilder(AuthenticationManagerBuilder builder) throws Exception {
         builder.userDetailsService(userDetailService);
 
-//        builder
-//                .inMemoryAuthentication()
-//                .withUser("admin")
-//                .password("1111")
-//                .roles("USER");
+        builder
+                .inMemoryAuthentication()
+//                .withUser("user").password("1111").authorities("ROLE_USER")
+//                .and()
+                .withUser("admin").password("2222").authorities("ROLE_USER","ROLE_ADMIN");
     }
 
     @Override
@@ -51,7 +51,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .failureHandler(failure)
                 .and()
                 .authorizeRequests()
-                .antMatchers("/**")
-                .permitAll();
+                .antMatchers("/admin/**").access("hasRole('ROLE_ADMIN')")
+                .antMatchers("/**").permitAll();
     }
 }
