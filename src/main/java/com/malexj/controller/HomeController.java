@@ -10,16 +10,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
+@RequestMapping(path = "/")
 public class HomeController {
 
     @Autowired
     private AccountService accountService;
 
-    @RequestMapping(path = "/", method = RequestMethod.GET)
-    public String home(){
+    @RequestMapping(method = RequestMethod.GET)
+    public String index_GET(){
         return "index";
     }
 
+    // TEST PAGE
     @RequestMapping(path = "/aut", method = RequestMethod.GET)
     public String home_aut(){
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();

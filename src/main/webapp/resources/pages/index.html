@@ -17,16 +17,12 @@
         <div class="main-nav">
             <ul>
                 <li><a ng-show="isLogin()" href="" class="cd-signin cd-btn cd-login">Login</a></li>
-                <li><a ng-hide="isLogin()" href="" ng-click="logoutClick()" class="cd-btn">Logout</a></li>
+                <li><a ng-hide="isLogin()" href="" ng-click="logoutClick()" class="cd-btn cd-btn-logout">Logout</a></li>
             </ul>
         </div>
-        <!--<a ng-show="isLogin()" href="" class="cd-btn cd-login">Login</a>-->
-        <!--<a ng-hide="isLogin()" ng-click="logoutClick()" href="" class="cd-btn">Logout</a>-->
     </div>
-
     <!-- Login form -->
     <div th:replace="templ/login_form :: login_form"></div>
-
 </section>
 
 <div th:replace="templ/header_nav :: header_nav"></div>
@@ -150,9 +146,23 @@
     </section> <!-- #cd-placeholder-4 -->
     <br/>
 
+<section class="cd-backggg">
+    <section id="cd-placeholder-5" class="cd-section cd-container ">
+
+
+
+
+        </section>
+    <br/>
+</section>
+
+    <section id="cd-placeholder-6" class="cd-section cd-container">
+        <div th:replace="templ/about :: about"></div>
+    </section>
+
 </main>
 
-<footer>
+<footer id="cd-footer">
     Malexj
 </footer>
 

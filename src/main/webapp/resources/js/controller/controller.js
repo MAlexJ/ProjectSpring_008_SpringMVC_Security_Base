@@ -64,3 +64,15 @@ myApp.controller('loginController', function ($scope, $http, $cookieStore) {
 
 
 });
+
+myApp.controller('homeController', function ($scope, $http, $cookieStore) {
+    
+});
+
+myApp.controller('patternsController', function ($scope, $http, $cookieStore) {
+    
+});
+
+myApp.controller('aboutController', function ($scope, $http, $cookieStore) {
+    
+});
