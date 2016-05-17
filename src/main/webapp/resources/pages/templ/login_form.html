@@ -37,22 +37,18 @@
         <div id="cd-login"> <!-- log in form -->
             <form class="cd-form" name="loginForm">
                 <p class="fieldset">
-                    <label class="image-replace cd-email" for="signin-email">Username</label>
-                    <input ng-model="login.name" class="full-width has-padding has-border" id="signin-email" type="text"
+                    <input ng-model="login.name" class="full-width has-padding has-border"  type="text"
                            placeholder="Username" required=""/>
-                    <span class="cd-error-message">Error message here!</span>
                 </p>
 
                 <p class="fieldset">
-                    <label class="image-replace cd-password" for="signin-password">Password</label>
-                    <input ng-model="login.password" class="full-width has-padding has-border" id="signin-password"
+                    <input ng-model="login.password" class="full-width has-padding has-border"
                            type="text" placeholder="Password" required=""/>
                     <a href="" class="hide-password">Hide</a>
-                    <span class="cd-error-message">Error message here!</span>
                 </p>
 
                 <p class="fieldset">
-                    <input ng-click="loginClick(loginForm, login)" class="full-width" type="submit" value="Login"/>
+                    <input ng-click="loginClick(loginForm, login)" required="" class="full-width" type="submit" value="Login"/>
                 </p>
             </form>
 
@@ -63,29 +59,23 @@
         <div id="cd-signup"> <!-- sign up form -->
             <form class="cd-form" name="regForm">
                 <p class="fieldset">
-                    <label class="image-replace cd-username" for="signup-username">Username</label>
-                    <input ng-model="reg.name" class="full-width has-padding has-border" id="signup-username"
+                    <input ng-model="reg.name" class="full-width has-padding has-border"
                            type="text" placeholder="Username" required=""/>
-                    <span class="cd-error-message">Error message here!</span>
                 </p>
 
                 <p class="fieldset">
-                    <label class="image-replace cd-email" for="signup-email">E-mail</label>
-                    <input ng-model="reg.email" class="full-width has-padding has-border" id="signup-email" type="email"
+                    <input ng-model="reg.email" class="full-width has-padding has-border" type="email"
                            placeholder="E-mail" required=""/>
-                    <span class="cd-error-message">Error message here!</span>
                 </p>
 
                 <p class="fieldset">
-                    <label class="image-replace cd-password" for="signup-password">Password</label>
-                    <input ng-model="reg.password" class="full-width has-padding has-border" id="signup-password"
+                    <input ng-model="reg.password" class="full-width has-padding has-border"
                            type="text" placeholder="Password" required=""/>
                     <a href="" class="hide-password">Hide</a>
-                    <span class="cd-error-message">Error message here!</span>
                 </p>
 
                 <p class="fieldset">
-                    <input ng-click="regClick(regForm, reg)" class="full-width has-padding" type="submit"
+                    <input ng-click="regClick(regForm, reg)" class="full-width" type="submit"
                            value="Create account"/>
                 </p>
             </form>
@@ -97,16 +87,14 @@
             <p class="cd-form-message">Lost your password? Please enter your email address. You will receive a link to
                 create a new password.</p>
 
-            <form class="cd-form">
+            <form class="cd-form" name="restoreForm">
                 <p class="fieldset">
-                    <label class="image-replace cd-email" for="reset-email">E-mail</label>
-                    <input class="full-width has-padding has-border" id="reset-email" type="email"
-                           placeholder="E-mail"/>
-                    <span class="cd-error-message">Error message here!</span>
+                    <input ng-model="rest.email" class="full-width has-padding has-border" type="email"
+                           placeholder="E-mail" required=""/>
                 </p>
 
                 <p class="fieldset">
-                    <input class="full-width has-padding" type="submit" value="Reset password"/>
+                    <input ng-click="restClick(restoreForm, rest)" class="full-width" type="submit" value="Reset password"/>
                 </p>
             </form>
 

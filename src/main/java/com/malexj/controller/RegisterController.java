@@ -10,7 +10,13 @@ public class RegisterController {
 
     @ResponseStatus(HttpStatus.OK)
     @RequestMapping(path = "/register", method = RequestMethod.POST)
-    public void home(@RequestBody Account account){
+    public void register_POST(@RequestBody Account account){
+        System.err.println(account);
+    }
+
+    @ResponseStatus(HttpStatus.OK)
+    @RequestMapping(path = "/restore", method = RequestMethod.POST)
+    public void restore_POST(@RequestBody Account account){
         System.err.println(account);
     }
 
