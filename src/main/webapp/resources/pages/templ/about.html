@@ -2,83 +2,118 @@
     <div class="cd-tabs">
         <nav>
             <ul class="cd-tabs-navigation">
-                <li><a data-content="inbox" class="selected" href="">About</a></li>
-                <li><a data-content="new" href="">Web</a></li>
-                <li><a data-content="gallery" href="">Spring</a></li>
-                <li><a data-content="store" href="">SQL</a></li>
-                <li><a data-content="settings" href="">Test</a></li>
-            </ul> <!-- cd-tabs-navigation -->
+                <li><a data-content="about" class="selected" href="">About</a></li>
+                <li><a data-content="web" href="">Web</a></li>
+                <li><a data-content="spring" href="">Spring</a></li>
+                <li><a data-content="sql" href="">SQL</a></li>
+                <li><a data-content="test" href="">Test</a></li>
+            </ul>
         </nav>
-
         <ul class="cd-tabs-content">
-            <li data-content="inbox" class="selected">
-                <p>Inbox Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum recusandae rem animi
-                    accusamus quisquam reprehenderit sed voluptates, numquam, quibusdam velit dolores repellendus
-                    tempora corrupti accusantium obcaecati voluptate totam eveniet laboriosam?</p>
-
-                <p>Inbox Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum recusandae rem animi
-                    accusamus quisquam reprehenderit sed voluptates, numquam, quibusdam velit dolores repellendus
-                    tempora corrupti accusantium obcaecati voluptate totam eveniet laboriosam?</p>
+            <li data-content="about" class="selected">
+                <p><b>About The Website</b></p>
+                <p>Hello, my name is Alex and welcome to my web site!<br/>
+                    This website aims to provide detailed articles and tutorials about design patterns in Java.
+                    These articles and tutorials are written and developed from a
+                    developer perspective and most of the articles include examples.
+                    The provided examples everyone can freely download and analyse from:
+                    https://github.com/malexj.<br/>
+                    All examples shown in this wbesite are available In this GitHub repository.
+                </p>
+                <p><b>Why do I do all this?</b></p>
+                <p>I love Java. Thus any time spent working with Java is fun. I love learning new things about Java and
+                    sharing my experience with everyone. Writing articles for this website provides me a chance to
+                    investigate and get my hands dirty with technologies that I never used before or I just heard of. I
+                    do lots of reading and experiments before I write an article and this takes time. But so far it is
+                    worth the effort.</p>
+                <p>List of technologies used in the creation of the website referenced below...</p>
+            </li>
+            <li data-content="web">
+                <p><b>Web components used when creating the site:</b></p>
+                <p>
+                    <b>AngularJS</b><br/>
+                    AngularJS is an open-source web
+                    application framework mainly maintained by Google and by a community of individuals and
+                    corporations to address many of the challenges encountered in developing single-page
+                    applications.<br/><br/>
+                    <b>Apache Commons</b><br/>
+                    The Apache Commons is a project of the Apache Software Foundation, formerly under the Jakarta
+                    Project. The purpose of the Commons is to provide reusable, open source Java software. The Commons
+                    is composed of three parts: proper, sandbox, and dormant.<br/>
+                    <u>Used:</u><br/>
+                    commons-io<br/>
+                    commons-fileupload<br/>
+                    commons-codec<br/>
+                    commons-dbcp2<br/>
+                    maven<br/><br/>
+                    <b>Thymeleaf</b><br/>
+                    Thymeleaf is a Java XML/XHTML/HTML5 template engine that can work both in web (Servlet-based)
+                    and non-web environments.<br/><br/>
+                    <b>OpenShift</b><br/>
+                    OpenShift is Red Hat's Platform-as-a-Service (PaaS) that allows developers to quickly
+                    develop, host, and scale applications in a cloud environment. With OpenShift you have a
+                    choice of offerings, including online, on-premise, and open source project options.<br/><br/>
+                    <b>JBoss</b><br/>
+                    The JBoss Enterprise Application Platform (or JBoss EAP) is a subscription-based/open-source
+                    Java EE-based application server runtime platform used for building, deploying, and hosting
+                    highly-transactional Java applications and services.<br/><br/>
+                </p>
+            </li>
+            <li data-content="spring">
+                <p>
+                    <b>Spring</b><br/>
+                    The Spring Framework is an application framework and inversion of control container for the Java
+                    platform. The framework's core features can be used by any Java application, but there are
+                    extensions for building web applications on top of the Java EE platform. <br/>
+                    <br/>
+                    <b> Used when creating a web site:</b><br/>
+                    Spring Core<br/>
+                    Spring MVC<br/>
+                    Spring Security<br/>
+                    Spring Data-Jpa<br/>
+                    Spring Transaction<br/>
+                    Spring-Test<br/>
+                </p>
+            </li>
+            <li data-content="sql">
+                <p>
+                    <b>Hibernate</b><br/>
+                    Hibernate ORM (Hibernate in short) is an object-relational mapping framework for the Java
+                    language. It provides a framework for mapping an object-oriented domain model to a
+                    relational database.<br/><br/>
+                    <b>PostgreSQL</b><br/>
+                    PostgreSQL is an object-relational database management system (ORDBMS) with an emphasis on
+                    extensibility and standards-compliance.<br/><br/>
+                    <b>Dozer</b><br/>
+                    Dozer is a Java Bean to Java Bean mapper that recursively copies data from one object to
+                    another.<br/><br/>
+                </p>
             </li>
 
-            <li data-content="new">
-                <p>New Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non a voluptatibus, ex odit totam
-                    cumque nihil eos asperiores ea, labore rerum. Doloribus tenetur quae impedit adipisci, laborum
-                    dolorum eaque ratione quaerat, eos dicta consequuntur atque ex facere voluptate cupiditate
-                    incidunt.</p>
+            <li data-content="test">
+                <p>
+                    <b>JUnit</b><br/>
+                    JUnit is a unit testing framework for the Java programming language. JUnit has been important
+                    in the development of test-driven development.<br/><br/>
 
-                <p>New Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non a voluptatibus, ex odit totam
-                    cumque nihil eos asperiores ea, labore rerum. Doloribus tenetur quae impedit adipisci, laborum
-                    dolorum eaque ratione quaerat, eos dicta consequuntur atque ex facere voluptate cupiditate
-                    incidunt.</p>
+                    <b>JWebUnit</b><br/>
+                    JWebUnit is a Java-based testing framework for web applications. It wraps existing testing
+                    frameworks such as HtmlUnit and Selenium with a unified, simple testing interface to allow
+                    you to quickly test the correctness of your web applications.<br/><br/>
+
+                    <b>Mockito</b><br/>
+                    Tasty mocking framework for unit tests in Java.<br/><br/>
+
+                    <b>DbUnit</b><br/>
+                    DbUnit is a JUnit extension targeted at database-driven projects that, among other things,
+                    puts your database into a known state between test runs.<br/><br/>
+
+                    <b>JaCoCo</b><br/>
+                    JaCoCo is a free code coverage library for Java, which has been created by the EclEmma team based on
+                    the
+                    lessons learned from using and integration existing libraries for many years.<br/><br/>
+                </p>
             </li>
-
-            <li data-content="gallery">
-                <p>Gallery Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque tenetur aut, cupiditate,
-                    libero eius rerum incidunt dolorem quo in officia.</p>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ipsa vero, culpa doloremque
-                    voluptatum consectetur mollitia, atque expedita unde excepturi id, molestias maiores delectus
-                    quos molestiae. Ab iure provident adipisci eveniet quisquam ratione libero nam inventore error
-                    pariatur optio facilis assumenda sint atque cumque, omnis perspiciatis. Maxime minus quam
-                    voluptatum provident aliquam voluptatibus vel rerum. Soluta nulla tempora aspernatur maiores!
-                    Animi accusamus officiis neque exercitationem dolore ipsum maiores delectus asperiores
-                    reprehenderit pariatur placeat, quaerat sed illum optio qui enim odio temporibus, nulla nihil
-                    nemo quod dicta consectetur obcaecati vel. Perspiciatis animi corrupti quidem fugit deleniti,
-                    atque mollitia labore excepturi ut.</p>
-            </li>
-
-            <li data-content="store">
-                <p>Store Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum recusandae rem animi
-                    accusamus quisquam reprehenderit sed voluptates, numquam, quibusdam velit dolores repellendus
-                    tempora corrupti accusantium obcaecati voluptate totam eveniet laboriosam?</p>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, enim, pariatur. Ab assumenda,
-                    accusantium! Consequatur magni placeat quae eos dicta, cum expedita sunt facilis est impedit
-                    possimus dolorum sequi nostrum nobis sit praesentium molestias nulla laudantium fugit corporis
-                    nam ut saepe harum ipsam? Debitis accusantium, omnis repudiandae modi, distinctio illo
-                    voluptatibus aperiam odio veritatis, quam perferendis eaque ullam. Temporibus tempore ad
-                    voluptates explicabo ea sit deleniti ipsum quos dolores tempora odio, ab corporis molestiae,
-                    eaque optio, perferendis! Cumque libero quia modi! Totam magni rerum id iusto explicabo
-                    distinctio, magnam, labore sed nemo expedita velit quam, perspiciatis non temporibus sit minus
-                    voluptatum. Iste, cumque sunt suscipit facere iusto asperiores, ullam dolorum excepturi quidem
-                    ea quibusdam deserunt illo. Nesciunt voluptates repellat ipsam.</p>
-            </li>
-
-            <li data-content="settings">
-                <p>Settings Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam nam magni, ullam
-                    nihil a suscipit, ex blanditiis, adipisci tempore deserunt maiores. Nostrum officia, ratione
-                    enim eaque nihil quis ea, officiis iusto repellendus. Animi illo in hic, maxime deserunt unde
-                    atque a nesciunt? Non odio quidem deserunt animi quod impedit nam, voluptates eum, voluptate
-                    consequuntur sit vel, et exercitationem sint atque dolores libero dolorem accusamus ratione iste
-                    tenetur possimus excepturi. Accusamus vero, dignissimos beatae tempore mollitia officia
-                    voluptate quam animi vitae.</p>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique ipsam eum reprehenderit
-                    minima at sapiente ad ipsum animi doloremque blanditiis unde omnis, velit molestiae voluptas
-                    placeat qui provident ab facilis.</p>
-            </li>
-
-        </ul> <!-- cd-tabs-content -->
-    </div> <!-- cd-tabs -->
+        </ul>
+    </div>
 </div>

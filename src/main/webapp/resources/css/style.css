@@ -13,7 +13,7 @@ body {
     font-size: 100%;
     font-family: "Open Sans", sans-serif;
     color: #030d18;
-    background-color: #f0eee1;
+    background-color: rgba(240, 238, 225, 0.22);
 }
 
 a {
@@ -119,6 +119,13 @@ Navigation
     display: block;
     height: 32px;
 }
+
+.cd-logo-footer img {
+    display: inline-block;
+    margin-right: 5px;
+    height: 32px;
+}
+
 
 @media only screen and (min-width: 768px) {
     #cd-logo {
@@ -244,15 +251,14 @@ Intro
 #cd-footer {
     position: relative;
     height: 60px;
-    background: #141414;
-    text-align: center;
+    background: rgba(3, 13, 24, 0.96);
     /*z-index: 2;*/
 }
 
 .cd-back-ground-1 {
     position: relative;
 
-    background: rgb(255, 255, 255);
+    background: rgb(245, 245, 245);
     background-size: cover;
     /*z-index: 2;*/
 }
@@ -260,7 +266,7 @@ Intro
 .cd-back-ground-2 {
     position: relative;
 
-    background: rgba(0, 167, 160, 0.08);
+    background: rgb(244, 244, 244);
     background-size: cover;
     /*z-index: 2;*/
 }
@@ -268,7 +274,7 @@ Intro
 .cd-back-ground-3 {
     position: relative;
 
-    background: rgba(222, 189, 48, 0.08);
+    background: rgba(0, 37, 255, 0.05);
     background-size: cover;
     /*z-index: 2;*/
 }
