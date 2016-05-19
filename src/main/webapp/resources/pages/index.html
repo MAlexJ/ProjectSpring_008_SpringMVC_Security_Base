@@ -7,7 +7,7 @@
 
 <header class="cd-header">
     <div id="cd-logo">
-        <a href="#"><img th:src="@{/resources/img/logo.png}" src="../img/logo.png" alt="Logo"/></a>
+        <a href="/"><img th:src="@{/resources/img/logo.png}" src="../img/logo.png" alt="Logo"/></a>
     </div>
 </header>
 
@@ -83,7 +83,7 @@
         </section> <!-- #cd-placeholder-2 -->
         <br/>
     </section>
-    <section class="cd-back-ground-3">
+    <section>
         <section id="cd-placeholder-3" class="cd-section cd-container">
             <br/>
             <h2>Structural design patterns</h2>
@@ -114,74 +114,78 @@
         </section> <!-- #cd-placeholder-3 -->
     </section> <!-- #cd-placeholder-3 -->
     <br/>
-    <section id="cd-placeholder-4" class="cd-section cd-container">
-        <br/>
-        <h2>Behavioral design patterns</h2>
-        <br/>
-        <p>These design patterns are all about Class's objects communication. Behavioral patterns are those patterns
-            that are most specifically concerned with communication between objects.</p>
-        <br/>
-        <ul>
-            <li class="brown-text"><b>Chain of responsibility</b></li>
-            A way of passing a request between a chain of objects <br/><br/>
+    <section class="cd-back-ground-2">
+        <section id="cd-placeholder-4" class="cd-section cd-container">
+            <br/>
+            <h2>Behavioral design patterns</h2>
+            <br/>
+            <p>These design patterns are all about Class's objects communication. Behavioral patterns are those patterns
+                that are most specifically concerned with communication between objects.</p>
+            <br/>
+            <ul>
+                <li class="brown-text"><b>Chain of responsibility</b></li>
+                A way of passing a request between a chain of objects <br/><br/>
 
-            <li class="brown-text"><b>Command</b></li>
-            Encapsulate a command request as an object<br/><br/>
+                <li class="brown-text"><b>Command</b></li>
+                Encapsulate a command request as an object<br/><br/>
 
-            <li class="brown-text"><b>Interpreter</b></li>
-            <br/> A way to include language elements in a program<br/>
+                <li class="brown-text"><b>Interpreter</b></li>
+                <br/> A way to include language elements in a program<br/>
 
-            <li class="brown-text"><b>Iterator</b></li>
-            <br/>Sequentially access the elements of a collection<br/>
+                <li class="brown-text"><b>Iterator</b></li>
+                <br/>Sequentially access the elements of a collection<br/>
 
-            <li class="brown-text"><b>Mediator</b></li>
-            Defines simplified communication between classes<br/><br/>
+                <li class="brown-text"><b>Mediator</b></li>
+                Defines simplified communication between classes<br/><br/>
 
-            <li class="brown-text"><b>Memento</b></li>
-            Capture and restore an object's internal state<br/><br/>
+                <li class="brown-text"><b>Memento</b></li>
+                Capture and restore an object's internal state<br/><br/>
 
-            <li class="brown-text"><b>Null Object</b></li>
-            Designed to act as a default value of an object<br/><br/>
+                <li class="brown-text"><b>Null Object</b></li>
+                Designed to act as a default value of an object<br/><br/>
 
-            <li class="brown-text"><b>Observer</b></li>
-            A way of notifying change to a number of classes<br/><br/>
+                <li class="brown-text"><b>Observer</b></li>
+                A way of notifying change to a number of classes<br/><br/>
 
-            <li class="brown-text"><b>State</b></li>
-            Alter an object's behavior when its state changes<br/><br/>
+                <li class="brown-text"><b>State</b></li>
+                Alter an object's behavior when its state changes<br/><br/>
 
-            <li class="brown-text"><b>Strategy</b></li>
-            Encapsulates an algorithm inside a class<br/><br/>
+                <li class="brown-text"><b>Strategy</b></li>
+                Encapsulates an algorithm inside a class<br/><br/>
 
-            <li class="brown-text">Template method<b></b></li>
-            Defer the exact steps of an algorithm to a subclass<br/><br/>
+                <li class="brown-text">Template method<b></b></li>
+                Defer the exact steps of an algorithm to a subclass<br/><br/>
 
-            <li class="brown-text"><b>Visitor</b></li>
-            Defines a new operation to a class without change<br/><br/>
+                <li class="brown-text"><b>Visitor</b></li>
+                Defines a new operation to a class without change<br/><br/>
 
-        </ul>
-    </section> <!-- #cd-placeholder-4 -->
-
+            </ul>
+        </section> <!-- #cd-placeholder-4 -->
+    </section>
     <br/>
 
-    <section class="cd-back-ground-1">
+    <section>
         <section id="cd-placeholder-5" class="cd-section cd-container" style="max-width:100%">
             <div th:replace="templ/patterns :: patterns"></div>
         </section>
         <br/>
     </section> <!-- #cd-placeholder-5 -->
-
-    <section id="cd-placeholder-6" class="cd-section cd-container">
-        <div th:replace="templ/about :: about"></div>
-    </section> <!-- #cd-placeholder-6 -->
-
+    <section class="cd-back-ground-2">
+        <section id="cd-placeholder-6" class="cd-section cd-container">
+            <div th:replace="templ/about :: about"></div>
+        </section> <!-- #cd-placeholder-6 -->
+    </section>
 </main>
 
 <footer id="cd-footer">
     <section class="cd-section cd-container">
-        <a class="cd-logo-footer" href="https://github.com/malexj"><img th:src="@{/resources/img/git.png}" src="../img/git.png" alt="Git"/></a>
-        <a class="cd-logo-footer" href="https://www.linkedin.com/in/alex-maximov-027834102"><img th:src="@{/resources/img/in.png}" src="../img/in.png" alt="In"/></a>
-        <a class="cd-logo-footer" href="https://www.facebook.com/profile.php?id=100009500853381"><img th:src="@{/resources/img/face.png}" src="../img/face.png"
-                                                alt="Facebook"/></a>
+        <a class="cd-logo-footer" href="https://github.com/malexj"><img th:src="@{/resources/img/git.png}"
+                                                                        src="../img/git.png" alt="Git"/></a>
+        <a class="cd-logo-footer" href="https://www.linkedin.com/in/alex-maximov-027834102"><img
+                th:src="@{/resources/img/in.png}" src="../img/in.png" alt="In"/></a>
+        <a class="cd-logo-footer" href="https://www.facebook.com/profile.php?id=100009500853381"><img
+                th:src="@{/resources/img/face.png}" src="../img/face.png"
+                alt="Facebook"/></a>
     </section>
 </footer>
 
