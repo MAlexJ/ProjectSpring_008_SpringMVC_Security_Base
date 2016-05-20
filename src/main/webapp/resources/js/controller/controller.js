@@ -80,14 +80,14 @@ myApp.controller('patternsController', function ($scope, $http, $cookieStore) {
 
     // Comment -> POST
     $scope.postComment = function (formCommentary, textareaCommentary) {
-        if (formCommentary.$valid && $cookieStore.get('session') != null) {
+        if (formCommentary.$valid && $cookieStore.get('session') != null && textareaCommentary.text != ' ') {
             var comment = {
                 id_pattern: 123,
                 id_account: 22,
                 text: textareaCommentary.text
             };
             $http.post('/comment', comment).success(function () {
-                textareaCommentary.text=' ';
+                textareaCommentary.text = ' ';
             }).error(function () {
                 alert("error send")
             });
@@ -97,7 +97,7 @@ myApp.controller('patternsController', function ($scope, $http, $cookieStore) {
             $('.cd-signin').click();
         }
 
-        if (!formCommentary.$valid) {
+        if (!formCommentary.$valid && $cookieStore.get('session') == null || textareaCommentary.text == ' ') {
             alert("fill comment text")
         }
     };

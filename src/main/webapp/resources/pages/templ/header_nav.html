@@ -2,47 +2,53 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <div class="cd-secondary-nav" th:fragment="header_nav">
-<a href="#0" class="cd-secondary-nav-trigger">Menu<span></span></a>
-<nav>
-    <ul>
-        <li>
-            <a href="#cd-placeholder-1">
-                <b>Intro</b>
-                <span></span><!-- icon -->
-            </a>
-        </li>
-        <li>
-            <a href="#cd-placeholder-2">
-                <b>Creational</b>
-                <span></span><!-- icon -->
-            </a>
-        </li>
-        <li>
-            <a href="#cd-placeholder-3">
-                <b>Structural</b>
-                <span></span><!-- icon -->
-            </a>
-        </li>
-        <li>
-            <a href="#cd-placeholder-4">
-                <b>Behavioral</b>
-                <span></span><!-- icon -->
-            </a>
-        </li>
-        <li>
-            <a href="#cd-placeholder-5">
-                <b>Patterns</b>
-                <span></span><!-- icon -->
-            </a>
-        </li>
-        <li>
-            <a href="#cd-placeholder-6">
-                <b>About</b>
-                <span></span><!-- icon -->
-            </a>
-        </li>
-    </ul>
-</nav>
+    <a href="#0" class="cd-secondary-nav-trigger">Menu<span></span></a>
+    <nav>
+        <ul>
+            <li>
+                <a href="#cd-placeholder-1">
+                    <span><img style="height: 40px" th:src="@{/resources/img/nav_intro.png}"
+                               src="../img/nav_intro.png"/></span>
+                    <b>Intro</b>
+                </a>
+            </li>
+            <li>
+                <a href="#cd-placeholder-2">
+                    <span><img style="height: 40px" th:src="@{/resources/img/nav_create.png}"
+                               src="../img/nav_create.png"/></span>
+                    <b>Creational</b>
+                </a>
+            </li>
+            <li>
+                <a href="#cd-placeholder-3">
+                    <span><img style="height: 40px" th:src="@{/resources/img/nav_structur.png}"
+                               src="../img/nav_structur.png"/></span>
+                    <b>Structural</b>
+                </a>
+            </li>
+            <li>
+                <a href="#cd-placeholder-4">
+                    <span><img style="height: 40px" th:src="@{/resources/img/nav_behav.png}"
+                               src="../img/nav_behav.png"/></span>
+                    <b>Behavioral</b>
+                </a>
+            </li>
+            <li>
+                <a href="#cd-placeholder-5">
+                    <span><img style="height: 40px" th:src="@{/resources/img/nav_patterns.png}"
+                               src="../img/nav_patterns.png"/></span>
+                    <b>Patterns</b>
+                </a>
+            </li>
+            <li>
+                <a href="#cd-placeholder-6">
+                    <span><img style="height: 40px" th:src="@{/resources/img/nav_about.png}"
+                               src="../img/nav_about.png"/></span><!-- icon -->
+                    <b>About</b>
+                </a>
+            </li>
+        </ul>
+    </nav>
 </div>
 
 </html>
