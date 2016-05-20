@@ -1,6 +1,6 @@
 package com.malexj.entity;
 
-public class Account {
+public class AccountEntity {
 
     private Long id;
     private String name;
@@ -8,7 +8,7 @@ public class Account {
     private String email;
     private Roles role;
 
-    public Account() {
+    public AccountEntity() {
     }
 
     public Long getId() {
@@ -53,7 +53,7 @@ public class Account {
 
     @Override
     public String toString() {
-        return "Account{" +
+        return "AccountEntity{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", password='" + password + '\'' +

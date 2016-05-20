@@ -1,6 +1,6 @@
 package com.malexj.controller;
 
-import com.malexj.entity.Account;
+import com.malexj.entity.AccountEntity;
 import com.malexj.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -28,7 +28,7 @@ public class HomeController {
         if(principal instanceof UserDetails) {
             UserDetails details = (UserDetails) principal;
 
-        Account loggedIn = accountService.findByAccountName(details.getUsername());
+        AccountEntity loggedIn = accountService.findByAccountName(details.getUsername());
             System.err.println(loggedIn.getName());
             return "login";
         }

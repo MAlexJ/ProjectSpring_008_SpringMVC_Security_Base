@@ -1,6 +1,6 @@
 package com.malexj.component.users;
 
-import com.malexj.entity.Account;
+import com.malexj.entity.AccountEntity;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -9,9 +9,9 @@ import java.util.Collection;
 
 public class AccountUserDetails implements UserDetails {
 
-    private final Account account;
+    private final AccountEntity account;
 
-    public AccountUserDetails(Account account) {
+    public AccountUserDetails(AccountEntity account) {
         this.account = account;
     }
 

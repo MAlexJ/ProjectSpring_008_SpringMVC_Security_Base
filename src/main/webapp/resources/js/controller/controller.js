@@ -38,7 +38,7 @@ myApp.controller('loginController', function ($scope, $http, $cookieStore) {
                 name: reg.name,
                 password: reg.password,
                 email: reg.email
-            };            
+            };
             $http.post('/register', account).success(function (status) {
                 $('.cd-user-modal').removeClass('is-visible');
             }).error(function (status) {
@@ -66,13 +66,40 @@ myApp.controller('loginController', function ($scope, $http, $cookieStore) {
 });
 
 myApp.controller('homeController', function ($scope, $http, $cookieStore) {
-    
+
 });
 
 myApp.controller('patternsController', function ($scope, $http, $cookieStore) {
-    
+
 });
 
 myApp.controller('aboutController', function ($scope, $http, $cookieStore) {
-    
+
+});
+myApp.controller('patternsController', function ($scope, $http, $cookieStore) {
+
+    // Comment -> POST
+    $scope.postComment = function (formCommentary, textareaCommentary) {
+        if (formCommentary.$valid && $cookieStore.get('session') != null) {
+            var comment = {
+                id_pattern: 123,
+                id_account: 22,
+                text: textareaCommentary.text
+            };
+            $http.post('/comment', comment).success(function () {
+                textareaCommentary.text=' ';
+            }).error(function () {
+                alert("error send")
+            });
+        }
+
+        if (formCommentary.$valid && $cookieStore.get('session') == null) {
+            $('.cd-signin').click();
+        }
+
+        if (!formCommentary.$valid) {
+            alert("fill comment text")
+        }
+    };
+
 });

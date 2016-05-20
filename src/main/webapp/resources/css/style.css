@@ -336,10 +336,11 @@ Intro
 
 .cd-btn-send {
     display: inline-block;
-    padding: 1em 1.8em;
+    padding: 0.6em 1.2em;
     background-color: rgba(12, 181, 184, 0.9);
     margin-top: 1em;
-    border-radius: 20em;
+    border-radius: 6em;
+    font-size: 10pt;
     /*-webkit-backface-visibility: hidden;*/
     /*backface-visibility: hidden;*/
     /*-webkit-font-smoothing: antialiased;*/
@@ -349,7 +350,7 @@ Intro
 }
 
 .no-touch .cd-btn-send:hover {
-    background-color: rgba(86, 106, 186, 0.65);
+    background-color: rgba(9, 38, 69, 0.65);
 }
 
 
@@ -1038,21 +1039,6 @@ Placeholder Sections
 
 a {
     outline: 0;
-}
-
-.design {
-    text-shadow: 0 1px 0 #ccc,
-    0 2px 0 #c9c9c9,
-    0 3px 0 #bbb,
-    0 4px 0 #b9b9b9,
-    0 5px 0 #aaa,
-    0 6px 1px rgba(0, 0, 0, .1),
-    0 0 5px rgba(0, 0, 0, .1),
-    0 1px 3px rgba(0, 0, 0, 0.12),
-    0 3px 5px rgba(0, 0, 0, .2),
-    0 5px 10px rgba(0, 0, 0, 0.11),
-    0 10px 10px rgba(0, 0, 0, .2),
-    0 20px 20px rgba(0, 0, 0, .15);
 }
 
 /* --------------------------------

@@ -1,9 +1,9 @@
 package com.malexj.service;
 
 
-import com.malexj.entity.Account;
+import com.malexj.entity.AccountEntity;
 
 public interface AccountService {
 
-    Account findByAccountName(String name);
+    AccountEntity findByAccountName(String name);
 }

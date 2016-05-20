@@ -13,7 +13,7 @@
 
 <section id="cd-intro" ng-controller="loginController">
     <div id="cd-intro-tagline">
-        <h1 class="design"><b>Design Patterns</b></h1>
+        <h1><b>Design Patterns</b></h1>
         <div class="main-nav">
             <ul>
                 <li><a ng-show="isLogin()" href="" class="cd-signin cd-btn cd-login">Login</a></li>
@@ -164,7 +164,7 @@
     </section>
     <br/>
 
-    <section>
+    <section ng-controller="patternsController">
         <section id="cd-placeholder-5" class="cd-section cd-container" style="max-width:100%">
             <div th:replace="templ/patterns :: patterns"></div>
         </section>

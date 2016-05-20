@@ -15,7 +15,7 @@
 
                         <img th:src="@{/resources/img/patern.png}" src="../img/patern.png" alt="Structure pattern"/>
 
-                        <div style="padding-bottom: 30px;padding-top: 20px">
+                        <div style="padding-bottom: 20px;padding-top: 20px">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae quidem blanditiis delectus
                                 corporis, possimus officia sint sequi ex tenetur id impedit est pariatur iure animi non
                                 a
@@ -31,62 +31,67 @@
 
                         </div>
 
-                        <!-- Block Comment -->
-                        <div style="display: block;padding-bottom: 5px">
-                            <img th:src="@{/resources/img/coment.png}" style="width: 36px;display: inline"
-                                 src="../img/coment.png"/>
-                            <div style="display: inline-block; height: 36px">
-                                <p><b>Alex</b></p>
-                                <p style="font-size: 8pt">26.10.16</p>
+                        <hr style="color: #ffffff"/>
+                        <div style="padding-top: 15px">
+                            <!-- Block Comment -->
+                            <div style="display: block;padding-bottom: 5px">
+                                <img th:src="@{/resources/img/coment.png}" style="width: 36px;display: inline"
+                                     src="../img/coment.png"/>
+                                <div style="display: inline-block; height: 36px">
+                                    <p><b>Alex</b></p>
+                                    <p style="font-size: 8pt">26.10.16</p>
+                                </div>
+                            </div>
+                            <div style="padding-bottom: 20px">
+                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi cupiditate et
+                                    laudantium
+                                    esse adipisci consequatur modi possimus accusantium vero atque
+                                </p>
+                            </div>
+
+                            <!-- Block Comment -->
+                            <div style="display: block;padding-bottom: 5px">
+                                <img th:src="@{/resources/img/coment.png}" style="width: 36px;display: inline"
+                                     src="../img/coment.png"/>
+                                <div style="display: inline-block; height: 36px">
+                                    <p><b>Alex</b></p>
+                                    <p style="font-size: 8pt">26.10.16</p>
+                                </div>
+                            </div>
+                            <div style="padding-bottom: 20px">
+                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi cupiditate et
+                                    laudantium
+                                    esse adipisci consequatur modi possimus accusantium vero atque
+                                </p>
+                            </div>
+
+                            <!-- Block Comment -->
+                            <div style="display: block;padding-bottom: 5px">
+                                <img th:src="@{/resources/img/coment.png}" style="width: 36px;display: inline"
+                                     src="../img/coment.png"/>
+                                <div style="display: inline-block; height: 36px">
+                                    <p><b>Alex</b></p>
+                                    <p style="font-size: 8pt">26.10.16</p>
+                                </div>
+                            </div>
+                            <div style="padding-bottom: 20px">
+                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi cupiditate et
+                                    laudantium
+                                    esse adipisci consequatur modi possimus accusantium vero atque
+                                </p>
+                            </div>
+
+
+                            <!-- Commentary -->
+                            <div style="padding-top: 5px">
+                                <form name="formCommentary">
+                                    <p>Leave a comment:</p>
+                                    <textarea ng-model="textareaCommentary.text" type="text" required="" style="width: 100%" rows="6"/>
+                                    <a ng-click="postComment(formCommentary, textareaCommentary)" href="" class="cd-btn-send">Post Comment</a>
+                                </form>
                             </div>
                         </div>
-                        <div style="padding-bottom: 20px">
-                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi cupiditate et laudantium
-                                esse adipisci consequatur modi possimus accusantium vero atque
-                            </p>
-                        </div>
-
-                        <!-- Block Comment -->
-                        <div style="display: block;padding-bottom: 5px">
-                            <img th:src="@{/resources/img/coment.png}" style="width: 36px;display: inline"
-                                 src="../img/coment.png"/>
-                            <div style="display: inline-block; height: 36px">
-                                <p><b>Alex</b></p>
-                                <p style="font-size: 8pt">26.10.16</p>
-                            </div>
-                        </div>
-                        <div style="padding-bottom: 20px">
-                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi cupiditate et laudantium
-                                esse adipisci consequatur modi possimus accusantium vero atque
-                            </p>
-                        </div>
-
-                        <!-- Block Comment -->
-                        <div style="display: block;padding-bottom: 5px">
-                            <img th:src="@{/resources/img/coment.png}" style="width: 36px;display: inline"
-                                 src="../img/coment.png"/>
-                            <div style="display: inline-block; height: 36px">
-                                <p><b>Alex</b></p>
-                                <p style="font-size: 8pt">26.10.16</p>
-                            </div>
-                        </div>
-                        <div style="padding-bottom: 20px">
-                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi cupiditate et laudantium
-                                esse adipisci consequatur modi possimus accusantium vero atque
-                            </p>
-                        </div>
-
-
-
-                        <div style="padding-top: 5px">
-                            <p>Commentary</p>
-                            <textarea type="text" required=""  style="width: 100%" rows="6" />
-
-                            <a href="" class="cd-btn-send">Send</a>
-                        </div>
-
-
-                    </div> <!-- cd-faq-content -->
+                    </div>
                 </li>
 
                 <li>
