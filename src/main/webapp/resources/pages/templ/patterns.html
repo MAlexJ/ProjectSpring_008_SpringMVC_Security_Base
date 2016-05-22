@@ -86,8 +86,11 @@
                             <div style="padding-top: 5px">
                                 <form name="formCommentary">
                                     <p>Leave a comment:</p>
-                                    <textarea ng-model="textareaCommentary.text" type="text" required="" style="width: 100%" rows="6"/>
-                                    <a ng-click="postComment(formCommentary, textareaCommentary)" href="" class="cd-btn-send">Post Comment</a>
+                                    <textarea ng-model="textareaCommentary.text" type="text" style="width: 100%"
+                                              rows="6"/>
+                                    <a ng-click="postComment(formCommentary, textareaCommentary)" href=""
+                                       class="cd-btn-send">Post Comment</a>
+                                    <span ng-show="errorMessage" class="cd-error-message-comm">Error message here! Username</span>
                                 </form>
                             </div>
                         </div>
@@ -225,7 +228,8 @@
                 </li>
             </ul> <!-- cd-faq-group -->
         </div> <!-- cd-faq-items -->
-        <a href="" style="background: url(/resources/img/cd-logo-close.svg) no-repeat center center " class="cd-close-panel"></a>
+        <a href="" style="background: url(/resources/img/cd-logo-close.svg) no-repeat center center "
+           class="cd-close-panel"></a>
     </section> <!-- cd-faq -->
 
 </div>

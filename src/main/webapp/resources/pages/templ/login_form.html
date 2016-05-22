@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="templ/head :: head"></head>
 
 <div class="cd-user-modal" th:fragment="login_form">
     <div class="cd-user-modal-container">
@@ -12,13 +13,16 @@
             <form class="cd-form" name="loginForm">
                 <p class="fieldset">
                     <input ng-model="login.name" class="full-width has-padding has-border" type="text"
-                           placeholder="Username" required=""/>
+                           placeholder="Username"/>
+                    <span ng-show="loginValidUserNAme" class="cd-error-message">The field of username is empty!</span>
+                    <span ng-show="loginFindValidUserNAme" class="cd-error-message">The user is not found!</span>
                 </p>
 
                 <p class="fieldset">
                     <input ng-model="login.password" class="full-width has-padding has-border"
-                           type="text" placeholder="Password" required=""/>
+                           type="text" placeholder="Password"/>
                     <a href="" class="hide-password">Hide</a>
+                    <span ng-show="loginValidPassword" class="cd-error-message">The field of password is empty!</span>
                 </p>
 
                 <p class="fieldset">
@@ -34,18 +38,21 @@
             <form class="cd-form" name="regForm">
                 <p class="fieldset">
                     <input ng-model="reg.name" class="full-width has-padding has-border"
-                           type="text" placeholder="Username" required=""/>
+                           type="text" placeholder="Username"/>
+                    <span ng-show="regValidUserName" class="cd-error-message">The field of username is empty!</span>
                 </p>
 
                 <p class="fieldset">
                     <input ng-model="reg.email" class="full-width has-padding has-border" type="email"
-                           placeholder="E-mail" required=""/>
+                           placeholder="E-mail"/>
+                    <span ng-show="regValidUEmail" class="cd-error-message">The field of email is empty!</span>
                 </p>
 
                 <p class="fieldset">
                     <input ng-model="reg.password" class="full-width has-padding has-border"
-                           type="text" placeholder="Password" required=""/>
+                           type="text" placeholder="Password"/>
                     <a href="" class="hide-password">Hide</a>
+                    <span ng-show="regValidPassword" class="cd-error-message">The field of password is empty!</span>
                 </p>
 
                 <p class="fieldset">
@@ -61,7 +68,9 @@
             <form class="cd-form" name="restoreForm">
                 <p class="fieldset">
                     <input ng-model="rest.email" class="full-width has-padding has-border" type="email"
-                           placeholder="E-mail" required=""/>
+                           placeholder="E-mail"/>
+                    <span ng-show="resetValidUEmail" class="cd-error-message">The field of email is empty!</span>
+                    <span ng-show="resetFindValidUEmail" class="cd-error-message">The email is not found!</span>
                 </p>
 
                 <p class="fieldset">
