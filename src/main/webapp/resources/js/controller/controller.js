@@ -20,7 +20,8 @@ myApp.controller('loginController', function ($scope, $http, $cookieStore, $time
 
     //2. Reset: 
     // Validate Email
-    $scope.resetValidUEmail = false;
+    $scope.resetEmptyUEmail = false;
+    $scope.resetNotValidUEmail = false;
     $scope.resetFindValidUEmail = false;
 
     // Login -> SpringSecurity
@@ -106,8 +107,12 @@ myApp.controller('loginController', function ($scope, $http, $cookieStore, $time
     $scope.regClick = function (regForm, reg) {
 
         if (regForm.$valid && !angular.isUndefined(reg)) {
-            if (!angular.isUndefined(reg.name) && !angular.isUndefined(reg.email) && !angular.isUndefined(reg.password)) {
-                if (reg.email.contains('@')) {
+            if (!angular.isUndefined(reg.name)
+                && !angular.isUndefined(reg.email)
+                && !angular.isUndefined(reg.password)) {
+                if (reg.email.contains('@')
+                    && reg.name != ''
+                    && reg.password != '') {
                     var account = {
                         name: reg.name,
                         password: reg.password,
@@ -123,7 +128,27 @@ myApp.controller('loginController', function ($scope, $http, $cookieStore, $time
                         }, 1200);
                     }).error(function (status) {
                         console.log("error код ответа: " + status);
+                        // error 403
                     });
+                }
+
+                if (reg.name == '') {
+                    $scope.regValidUserName = true;
+                    $timeout(function () {
+                        $scope.regValidUserName = false;
+                    }, 1500);
+                }
+                if (reg.password == '') {
+                    $scope.regValidPassword = true;
+                    $timeout(function () {
+                        $scope.regValidPassword = false;
+                    }, 1500);
+                }
+                if (reg.email == '') {
+                    $scope.regValidUEmail = true;
+                    $timeout(function () {
+                        $scope.regValidUEmail = false;
+                    }, 1500);
                 }
             }
 
@@ -164,27 +189,47 @@ myApp.controller('loginController', function ($scope, $http, $cookieStore, $time
 
     // Restore -> SpringSecurity
     $scope.restClick = function (restoreForm, rest) {
+        var EMAIL_REGEXP = /^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/;
 
         if (restoreForm.$valid && !angular.isUndefined(rest)) {
-            var restore = {
-                email: rest.email
-            };
-            $http.post('/restore', restore).success(function (status) {
-                $('.cd-user-modal').removeClass('is-visible');
-                $scope.rest.email = '';
-                $scope.rest = undefined;
-            }).error(function () {
-                $scope.resetFindValidUEmail = true;
-                $timeout(function () {
-                    $scope.resetFindValidUEmail = false;
-                }, 1500);
-            });
-        }
 
-        if (angular.isUndefined(rest)) {
-            $scope.resetValidUEmail = true;
+            if (!angular.isUndefined(rest.email)) {
+                var isMatchRegex = EMAIL_REGEXP.test(rest.email);
+                if (rest.email != '') {
+                    if (isMatchRegex) {
+                        var restore = {
+                            email: rest.email
+                        };
+                        $http.post('/restore', restore).success(function (status) {
+                            $('.cd-user-modal').removeClass('is-visible');
+                            $scope.rest.email = '';
+                            $scope.rest = undefined;
+                        }).error(function () {
+                            $scope.resetFindValidUEmail = true;
+                            $timeout(function () {
+                                $scope.resetFindValidUEmail = false;
+                            }, 1500);
+                        });
+                    }else {
+                        $scope.resetNotValidUEmail = true;
+                        $timeout(function () {
+                            $scope.resetNotValidUEmail = false;
+                        }, 1500);
+                    }
+                }
+
+            }
+
+            if (rest.email == '') {
+                $scope.resetEmptyUEmail = true;
+                $timeout(function () {
+                    $scope.resetEmptyUEmail = false;
+                }, 1500);
+            }
+        } else {
+            $scope.resetEmptyUEmail = true;
             $timeout(function () {
-                $scope.resetValidUEmail = false;
+                $scope.resetEmptyUEmail = false;
             }, 1500);
         }
 

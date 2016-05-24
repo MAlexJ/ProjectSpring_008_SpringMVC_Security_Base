@@ -67,9 +67,10 @@
                 <br/> You will receive a link to create a new password.</p>
             <form class="cd-form" name="restoreForm">
                 <p class="fieldset">
-                    <input ng-model="rest.email" class="full-width has-padding has-border" type="email"
+                    <input ng-model="rest.email" class="full-width has-padding has-border" type="text"
                            placeholder="E-mail"/>
-                    <span ng-show="resetValidUEmail" class="cd-error-message">The field of email is empty!</span>
+                    <span ng-show="resetEmptyUEmail" class="cd-error-message">The field of email is empty!</span>
+                    <span ng-show="resetNotValidUEmail" class="cd-error-message">Is not a valid email address!</span>
                     <span ng-show="resetFindValidUEmail" class="cd-error-message">The email is not found!</span>
                 </p>
 
