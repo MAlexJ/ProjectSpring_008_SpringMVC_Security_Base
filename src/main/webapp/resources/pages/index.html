@@ -15,7 +15,7 @@
     <div id="cd-intro-tagline">
         <h1><b>Design Patterns</b></h1>
         <div class="main-nav">
-            <ul>
+            <ul ng-show="startApp">
                 <li><a ng-show="isLogin()" href="" class="cd-signin cd-btn cd-login">Login</a></li>
                 <li><a ng-hide="isLogin()" href="" ng-click="logoutClick()" class="cd-btn cd-btn-logout">Logout</a></li>
             </ul>

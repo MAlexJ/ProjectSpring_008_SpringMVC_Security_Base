@@ -2,6 +2,11 @@
 
 myApp.controller('loginController', function ($scope, $http, $cookieStore, $timeout) {
 
+    
+    $timeout(function () {
+        $scope.startApp=true;
+    }, 900);
+
     // 1. Login:
     // Validate UserName
     $scope.loginValidUserNAme = false;
